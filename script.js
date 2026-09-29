@@ -1,19 +1,19 @@
 const projects = [
-  {category:'motion', label:'2D Motion Graphics', thumbnail:'assets/thumbnails/motion-graphics-01.webp', title:'Motion Graphics 01', id:'1GrU3MhaOrVEV_eOzO5DcvJzl0LO5lWdA', url:'https://drive.google.com/file/d/1GrU3MhaOrVEV_eOzO5DcvJzl0LO5lWdA/view?usp=drive_link'},
-  {category:'motion', label:'2D Motion Graphics', title:'Motion Graphics 02', id:'16LMXsBp6tqGAwpS6CRdW3YRt4zZe-fSD', url:'https://drive.google.com/file/d/16LMXsBp6tqGAwpS6CRdW3YRt4zZe-fSD/view?usp=drive_link'},
-  {category:'motion', label:'2D Motion Graphics', title:'Motion Graphics 03', id:'1jrNSGroGe7cGLNThl0FHb6XOzd4MgS44', url:'https://drive.google.com/file/d/1jrNSGroGe7cGLNThl0FHb6XOzd4MgS44/view?usp=drive_link'},
-  {category:'motion', label:'2D Motion Graphics', title:'Motion Graphics 04', id:'1D3HoZC1ZZ0bJWWmkPXfpM1QXpp4jS2Ms', url:'https://drive.google.com/file/d/1D3HoZC1ZZ0bJWWmkPXfpM1QXpp4jS2Ms/view?usp=drive_link'},
+  {category:'motion', label:'2D Motion Graphics', thumbnail:'assets/thumbnails/motion-graphics-01.webp', title:'motion graphics add', id:'1GrU3MhaOrVEV_eOzO5DcvJzl0LO5lWdA', url:'https://drive.google.com/file/d/1GrU3MhaOrVEV_eOzO5DcvJzl0LO5lWdA/view?usp=drive_link'},
+  {category:'motion', label:'2D Motion Graphics', title:'character explainer motion graphics', id:'16LMXsBp6tqGAwpS6CRdW3YRt4zZe-fSD', url:'https://drive.google.com/file/d/16LMXsBp6tqGAwpS6CRdW3YRt4zZe-fSD/view?usp=drive_link'},
+  {category:'motion', label:'2D Motion Graphics', thumbnail:'assets/thumbnails/brighton-ai.png', title:'app promo motion graphics', id:'1jrNSGroGe7cGLNThl0FHb6XOzd4MgS44', url:'https://drive.google.com/file/d/1jrNSGroGe7cGLNThl0FHb6XOzd4MgS44/view?usp=drive_link'},
+  {category:'motion', label:'2D Motion Graphics', title:'2D motion graphics', id:'1D3HoZC1ZZ0bJWWmkPXfpM1QXpp4jS2Ms', url:'https://drive.google.com/file/d/1D3HoZC1ZZ0bJWWmkPXfpM1QXpp4jS2Ms/view?usp=drive_link'},
   {category:'video', label:'Video Editing', title:'Book Trailer', id:'19nCHxgxyh4vZOCmB4bw3EtQm9JLiMR6b', url:'https://drive.google.com/file/d/19nCHxgxyh4vZOCmB4bw3EtQm9JLiMR6b/view?usp=drive_link'},
   {category:'video', label:'Video Editing', thumbnail:'assets/thumbnails/ai-video.webp', title:'AI Video', id:'1dIGBCBZGFG04Zd4O8uE-la21BYiz1zpa', url:'https://drive.google.com/file/d/1dIGBCBZGFG04Zd4O8uE-la21BYiz1zpa/view?usp=drive_link'},
   {category:'video', label:'Video Editing', title:'explainer reel', id:'14yBiW9_kAnTf_vZD4Pe3ofIjG889tunT', url:'https://drive.google.com/file/d/14yBiW9_kAnTf_vZD4Pe3ofIjG889tunT/view?usp=drive_link'},
-  {category:'video', label:'Video Editing', title:'Video Editing Project 04', id:'13dNkR-KEvGSIrisfkA7JOQvLNq1LoOeu', url:'https://drive.google.com/file/d/13dNkR-KEvGSIrisfkA7JOQvLNq1LoOeu/view?usp=drive_link'},
+  {category:'video', label:'Video Editing', title:'promo video editing', id:'13dNkR-KEvGSIrisfkA7JOQvLNq1LoOeu', url:'https://drive.google.com/file/d/13dNkR-KEvGSIrisfkA7JOQvLNq1LoOeu/view?usp=drive_link'},
   {category:'video', label:'Video Editing', title:'talking head video editing', id:'1kMM-8Rnrf8ruVum_nGuE6TWY9qdjBYzs', url:'https://drive.google.com/file/d/1kMM-8Rnrf8ruVum_nGuE6TWY9qdjBYzs/view?usp=sharing'},
   {category:'character', label:'2D Character Animation', title:'2D Chracter intro', id:'1KA7twT9LmKYe8QmY5AYI_jcpPeKEpJis', url:'https://drive.google.com/file/d/1KA7twT9LmKYe8QmY5AYI_jcpPeKEpJis/view?usp=drive_link'},
-  {category:'character', label:'2D Character Animation', title:'Character Animation 02', id:'1qy7-scZALe8trmeWaLc_82nlHs2avGhJ', url:'https://drive.google.com/open?id=1qy7-scZALe8trmeWaLc_82nlHs2avGhJ&usp=drive_copy'},
+  {category:'character', label:'2D Character Animation', title:'2D star wars', id:'1qy7-scZALe8trmeWaLc_82nlHs2avGhJ', url:'https://drive.google.com/open?id=1qy7-scZALe8trmeWaLc_82nlHs2avGhJ&usp=drive_copy'},
   {category:'character', label:'2D Character Animation', title:'logo animation', id:'1BTQe3qYLRsmC7qkxVa-jMZjfb5l7zYk0', url:'https://drive.google.com/file/d/1BTQe3qYLRsmC7qkxVa-jMZjfb5l7zYk0/view?usp=sharing'},
-  {category:'character', label:'2D Character Animation', title:'Character Animation 04', id:'1yHW9Ht3TkGT6DjGL6mNiV0OX5t2NTEb-', url:'https://drive.google.com/file/d/1yHW9Ht3TkGT6DjGL6mNiV0OX5t2NTEb-/view?usp=sharing'},
-  {category:'graphic', label:'Graphic Design', title:'Brand guidelines Design', folder:true, url:'https://drive.google.com/drive/folders/18BwUONJkFibl1Uk872ZUhsVb2s4Ynouy?usp=drive_link'},
-  {category:'artwork', label:'Digital Artwork', title:'Character Design Collection', folder:true, url:'https://drive.google.com/drive/folders/1pBQIosMqdpr6BTgsZifR6PIDxneRs6DX?usp=drive_link'},
+  {category:'character', label:'2D Character Animation', title:'showreel character animation', id:'1yHW9Ht3TkGT6DjGL6mNiV0OX5t2NTEb-', url:'https://drive.google.com/file/d/1yHW9Ht3TkGT6DjGL6mNiV0OX5t2NTEb-/view?usp=sharing'},
+  {category:'graphic', label:'Graphic Design', thumbnail:'assets/thumbnails/brand-guidelines.webp', title:'Brand guidelines Design', folder:true, url:'https://drive.google.com/drive/folders/18BwUONJkFibl1Uk872ZUhsVb2s4Ynouy?usp=drive_link'},
+  {category:'artwork', label:'Digital Artwork', thumbnail:'assets/thumbnails/character-design-avengers.webp', title:'Character Design Collection', folder:true, url:'https://drive.google.com/drive/folders/1pBQIosMqdpr6BTgsZifR6PIDxneRs6DX?usp=drive_link'},
   {category:'vtuber', label:'VTuber Design', title:'VTuber Project 01', id:'1UAsFOc5LAUIutoAvIeafIfFjtFE8Acln', url:'https://drive.google.com/file/d/1UAsFOc5LAUIutoAvIeafIfFjtFE8Acln/view?usp=drive_link'},
   {category:'vtuber', label:'VTuber Design', title:'VTuber Project 02', id:'1boUgATHVlVcjqeO9flA-Vjfn-1ffMGGg', url:'https://drive.google.com/file/d/1boUgATHVlVcjqeO9flA-Vjfn-1ffMGGg/view?usp=drive_link'},
   {category:'vtuber', label:'VTuber Design', title:'VTuber Project 03', id:'1z-HfGZiBiVjcPXQIn7AH8Fux0HOyMqU3', url:'https://drive.google.com/file/d/1z-HfGZiBiVjcPXQIn7AH8Fux0HOyMqU3/view?usp=drive_link'},
@@ -126,4 +126,5 @@ const sectionObserver = new IntersectionObserver(entries => {
   });
 },{rootMargin:'-40% 0px -50% 0px'});
 sections.forEach(s => sectionObserver.observe(s));
+
 
