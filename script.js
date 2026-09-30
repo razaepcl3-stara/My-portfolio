@@ -13,6 +13,10 @@ const projects = [
   {category:'character', label:'2D Character Animation', title:'logo animation', id:'1BTQe3qYLRsmC7qkxVa-jMZjfb5l7zYk0', url:'https://drive.google.com/file/d/1BTQe3qYLRsmC7qkxVa-jMZjfb5l7zYk0/view?usp=sharing'},
   {category:'character', label:'2D Character Animation', title:'showreel character animation', id:'1yHW9Ht3TkGT6DjGL6mNiV0OX5t2NTEb-', url:'https://drive.google.com/file/d/1yHW9Ht3TkGT6DjGL6mNiV0OX5t2NTEb-/view?usp=sharing'},
   {category:'graphic', label:'Graphic Design', thumbnail:'assets/thumbnails/brand-guidelines.webp', title:'Brand guidelines Design', folder:true, url:'https://drive.google.com/drive/folders/18BwUONJkFibl1Uk872ZUhsVb2s4Ynouy?usp=drive_link'},
+  {"category":"uiux","label":"UI / UX Design","title":"Rise Body Art","url":"https://www.figma.com/proto/E4F8tJSWiNbVCIP000oVsl/Rise-Body-Art-UI-DESIGN?page-id=0%3A1&node-id=1-3&scaling=scale-down-width&content-scaling=fixed","external":true,"thumbnail":"assets/thumbnails/rise-body-art.svg"},
+  {"category":"uiux","label":"UI / UX Design","title":"CX Collective","url":"https://www.figma.com/proto/FU8JCklaowD1z65surxAsF/CX-Collective?page-id=29%3A1382&node-id=29-1383&t=0zyiW6jcBjDGf4QW-0&scaling=min-zoom&content-scaling=fixed","external":true,"thumbnail":"assets/thumbnails/cx-collective.svg"},
+  {"category":"uiux","label":"UI / UX Design","title":"Vital Cleaning Services","url":"https://www.figma.com/proto/2yeYXbmkZSwAW4FEv54vXT/Vital-Cleaning-Services?page-id=17%3A463&node-id=17-464","external":true,"thumbnail":"assets/thumbnails/vital-cleaning.svg"},
+  {"category":"uiux","label":"UI / UX Design","title":"Good Cups","url":"https://www.figma.com/proto/DhmDkJUr9D8gt6v5VjAAGu/Good-Cups?page-id=39%3A1651&node-id=39-1912&t=tQbWNwlwGkWWuwKt-0&scaling=min-zoom&content-scaling=fixed","external":true,"thumbnail":"assets/thumbnails/good-cups.svg"},
   {category:'artwork', label:'Digital Artwork', thumbnail:'assets/thumbnails/character-design-avengers.webp', title:'Character Design Collection', folder:true, url:'https://drive.google.com/drive/folders/1pBQIosMqdpr6BTgsZifR6PIDxneRs6DX?usp=drive_link'},
   {category:'vtuber', label:'VTuber Design', title:'VTuber Project 01', id:'1UAsFOc5LAUIutoAvIeafIfFjtFE8Acln', url:'https://drive.google.com/file/d/1UAsFOc5LAUIutoAvIeafIfFjtFE8Acln/view?usp=drive_link'},
   {category:'vtuber', label:'VTuber Design', title:'VTuber Project 02', id:'1boUgATHVlVcjqeO9flA-Vjfn-1ffMGGg', url:'https://drive.google.com/file/d/1boUgATHVlVcjqeO9flA-Vjfn-1ffMGGg/view?usp=drive_link'},
@@ -33,12 +37,12 @@ function cardTemplate(project, index){
       <div class="project-thumb">
         <div class="project-fallback">${initials[project.category] || 'AA'}</div>
         ${thumbnail ? `<img loading="lazy" src="${thumbnail}" alt="${project.title} preview" onerror="this.style.display='none'">` : ''}
-        <span class="project-play">${project.folder ? '↗' : '▶'}</span>
+        <span class="project-play">${(project.folder || project.external) ? '↗' : '▶'}</span>
       </div>
       <div class="project-meta">
         <span>${project.label}</span>
         <h3>${project.title}</h3>
-        <p>${project.folder ? 'Open project collection' : 'Watch project preview'}</p>
+        <p>${project.external ? 'Explore Figma prototype' : (project.folder ? 'Open project collection' : 'Watch project preview')}</p>
       </div>
     </article>`;
 }
@@ -65,7 +69,7 @@ const modalLink = document.getElementById('modalLink');
 
 function openProject(index){
   const project = projects[index];
-  if(project.folder){
+  if(project.folder || project.external){
     window.open(project.url, '_blank', 'noopener');
     return;
   }
