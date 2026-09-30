@@ -107,13 +107,46 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   nav.classList.remove('open'); menuButton.setAttribute('aria-expanded','false');
 }));
 
-// Reveal on scroll
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+// Reveal on scroll with visible fallback
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const revealElements = document.querySelectorAll('.reveal, .mini-card, .education-list > div');
+revealElements.forEach((el, i) => {
+  el.classList.add('reveal');
+  el.style.transitionDelay = Math.min(i % 4 * 65, 195) + 'ms';
+});
+if ('IntersectionObserver' in window && !reducedMotion) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}
+    });
+  }, {threshold:.06});
+  revealElements.forEach(el => observer.observe(el));
+  document.documentElement.classList.add('motion-ready');
+} else {
+  revealElements.forEach(el => el.classList.add('visible'));
+}
+const progress = document.createElement('div');
+progress.className = 'scroll-progress';
+progress.setAttribute('aria-hidden', 'true');
+document.body.append(progress);
+let scrollPending = false;
+function updateProgress(){
+  const range = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.transform = 'scaleX(' + (range > 0 ? Math.min(1, Math.max(0, window.scrollY / range)) : 0) + ')';
+  scrollPending = false;
+}
+window.addEventListener('scroll', () => {
+  if(!scrollPending){scrollPending = true;requestAnimationFrame(updateProgress);}
+}, {passive:true});
+window.addEventListener('resize', updateProgress);
+updateProgress();
+filters.forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('.project-card:not(.hidden)').forEach(card => {
+    card.classList.add('visible');
+    card.classList.remove('filter-enter');
+    if(!reducedMotion){void card.offsetWidth;card.classList.add('filter-enter');}
   });
-},{threshold:.08});
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}));
 
 // Active nav link
 const sections = [...document.querySelectorAll('main section[id]')];
