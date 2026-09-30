@@ -10,6 +10,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .sheroes-feature{padding-top:34px}
+    .sheroes-feature h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(24px,4vw,42px);line-height:1.15;letter-spacing:-.035em;margin:0 0 20px}
+    .sheroes-feature h2 span{color:var(--accent)}
+    .sheroes-video{position:relative;aspect-ratio:16/9;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#000;box-shadow:var(--shadow)}
+    .sheroes-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .sheroes-watch{display:inline-block;margin-top:12px;font-size:13px;color:var(--muted)}
+    .sheroes-watch:hover{color:var(--accent)}
+    @media(max-width:680px){.sheroes-feature{padding-top:24px}.sheroes-video{border-radius:16px}}
+  </style>
 </head>
 <body>
   <div class="page-glow page-glow-a"></div>
@@ -34,6 +44,14 @@
   </header>
 
   <main>
+    <section class="sheroes-feature section-shell" aria-labelledby="sheroes-title">
+      <h2 id="sheroes-title">Worked in <span>SHEROES</span> Pakistani Movie as Freelancer</h2>
+      <div class="sheroes-video">
+        <iframe src="https://www.youtube.com/embed/CKKGpnTSqCY?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=CKKGpnTSqCY&amp;playsinline=1&amp;rel=0" title="SHEROES Pakistani movie — freelance work" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+      </div>
+      <a class="sheroes-watch" href="https://www.youtube.com/watch?v=CKKGpnTSqCY" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+    </section>
+
     <section class="hero section-shell" id="home">
       <div class="hero-copy reveal">
         <div class="eyebrow"><span class="status-dot"></span> Available for freelance & creative collaborations</div>
